@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #fafafa;
+  color: #111827;
+}
+
+.font-outfit {
+  font-family: 'Outfit', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #833ab4 0%, #c13584 35%, #e1306c 60%, #f77737 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #833ab4 0%, #c13584 35%, #e1306c 60%, #f77737 100%);
+}
+
+.gradient-ring {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, #833ab4, #c13584, #e1306c, #f77737) border-box;
+  border: 2px solid transparent;
+}
+
+@keyframes spin-slow {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-reverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(193, 53, 132, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(193, 53, 132, 0.6);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes progress-fill {
+  from {
+    stroke-dashoffset: var(--full-dash);
+  }
+  to {
+    stroke-dashoffset: var(--target-dash);
+  }
+}
+
+@keyframes bar-fill {
+  from {
+    width: 0%;
+  }
+  to {
+    width: var(--bar-width);
+  }
+}
+
+@keyframes step-check {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+.animate-spin-reverse {
+  animation: spin-reverse 6s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d1d5db;
+}
